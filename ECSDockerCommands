@@ -1,0 +1,17 @@
+sudo yum install -y docker
+sudo service docker start
+
+//add ec2-user to docker
+sudo usermod -aG docker ec2-user
+
+sudo docker ps
+sudo docker info
+sudo docker run -d -p 80:80 --name nginx nginx
+
+sudo docker network ls
+sudo docker inspect nginx4docker
+
+//run detach
+sudo docker run -it --detach=true ubuntu bash
+
+sudo systemctl status docker
